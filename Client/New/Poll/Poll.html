@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create a new poll</title>
+		
+		<!--Bootstrap-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+		
+		<!--JQuery-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		
+		<!--JavaScript Bootstrap-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<!-- In-house stuff -->
+		<link rel="stylesheet" href="https://my-poll-app.herokuapp.com/New/Poll/Poll.css">
+		
+		<script src='https://my-poll-app.herokuapp.com/New/Poll/Poll.js'></script>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	
+	<body>
+		<div class="col-xs-12" style="background-color:#bee4f3; border-radius: 13px">
+			<div class="col-xs-6 col-sm-8 col-md-8 col-lg-10 col-xl-10 text-left navtext" id="name">
+				<p class="false-header go-home">Voting app</p>
+			</div>
+			<div class="col-xs-3 col-sm-2 col-md-2 col-lg-1 col-xl-1 navtext go-home" style="background-color: #93d2eb;" id="home">
+				<p class="false-header">Home</p>
+			</div>
+			<div class="col-xs-3 col-sm-2 col-md-2 col-lg-1 col-xl-1 navtext" id="user">
+				<p id="user2">Sign in</p>
+			</div>
+		</div>
+		
+		<br>
+		
+		<div id="container" style="background-color: #d4edf7; border-radius: 10px; margin: 35px 7%;">
+			<p class="false-header navtext">Create a new poll</p>
+			<p id="success"></p>
+			<form id="poll">
+				<input type="text" name="poll-name" id="poll-name" class="form-control" placeholder="Input question asked in poll">
+				<br>
+				<div id="options">
+					<input type="text" name="option" class="form-control option" placeholder="Input poll option">
+				</div>
+				<input type="button" id="more" class="btn" value="Need more options?">
+				<br><br>
+				<input type="button" id="submit" class="form-control btn" value="Make poll">
+			</form>
+		</div>
+	</body>
+</html>

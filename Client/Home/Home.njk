@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>All polls</title>
+
+		<!--Bootstrap-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!--JQuery-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+		<!--JavaScript Bootstrap-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<!-- In-house stuff -->
+
+		<link rel="stylesheet" href="https://my-poll-app.herokuapp.com/Home/Home.css">
+
+		<script src='https://my-poll-app.herokuapp.com/Home/Home.js'></script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+
+	<body>
+		<div class="col-xs-12" style="background-color:#bee4f3; border-radius: 13px">
+			<div class="col-xs-6 col-sm-8 col-md-8 col-lg-10 col-xl-10 text-left navtext" id="name">
+				<p class="false-header go-home">Voting app</p>
+			</div>
+			<div class="col-xs-3 col-sm-2 col-md-2 col-lg-1 col-xl-1 navtext go-home" style="background-color: #93d2eb;" id="home">
+				<p class="false-header">Home</p>
+			</div>
+			<div class="col-xs-3 col-sm-2 col-md-2 col-lg-1 col-xl-1 navtext" id="user">
+				<p id="user2">Sign in</p>
+			</div>
+		</div>
+
+		<br>
+
+		<div id="main">
+			<p class="false-header">Below are all polls hosted by our site. </p>
+			<p>Select a poll to see the results and vote, or sign-in to make a new poll.</p>
+			{% for poll in polls %}
+			<p class="polls">{{ poll }}</p>
+			{% else %}
+			<p class="navtext false-header"> Apologies, we appear to be experiencing technical difficulties... Or we might not be hosting any polls at this time :( </p>
+			{% endfor %}
+			<a href="/new/poll">Don't like any of the polls here? Create your own!</a>
+		</div>
+
+	</body>
+
+</html>

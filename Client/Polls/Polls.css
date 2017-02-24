@@ -1,0 +1,152 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #e9f6fb;
+  text-align: center;
+}
+
+.navtext {
+  color: #2495c2;
+}
+
+.false-header {
+  font-size: 1.75em;
+  margin: 0px;
+}
+
+.unclicked {
+  border: 1px outset;
+  background-color: white;
+}
+
+.clicked {
+  border: 1px inset;
+  background-color: red;
+}
+
+.option:hover {
+  border: 1px inset;
+}
+
+.option {
+  margin: 0px 55px 0px 55px;
+  border-radius: 10px;
+  color: grey;
+}
+
+.submit {
+  margin: 0px;
+  border: 1px outset;
+  border-radius: 10px;
+  color: #2495c2;
+  background-color: #93d2eb;
+}
+
+.submit:hover {
+  border: 1px inset;
+}
+
+#author {
+  color: #b3b3b3;
+  font-style: italic;
+  font-size: 15px;
+  text-align: center;
+}
+
+.go-home:hover {
+  cursor: pointer;
+}
+
+#user2 {
+  white-space: nowrap;
+  border-radius: 10px;
+  margin: 6px 1px 6px 1px;
+  background-color:#3dafdb;
+}
+
+#user3 {
+  white-space: nowrap;
+  border-radius: 10px;
+  margin: 6px 1px 6px 1px;
+  background-color:#808080;
+  color: white;
+}
+
+#main {
+  background-color: #d4edf7;
+  border-radius: 10px;
+  margin: 35px 7%;
+}
+
+#user:hover {
+  cursor: pointer;
+}
+
+#delete {
+  background-color: red;
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 400px) {
+  .false-header {
+    white-space: nowrap;
+    font-size: 5vw;
+    font-weight: 600;
+  }
+  
+  body {
+    font-size: 4.5vw;
+  }
+  
+  .option {
+    margin: 0px 3vw 0px 3vw;
+    border-radius: 10px;
+    color: grey;
+  }
+  
+  #author {
+    font-size: 3.5vw;
+  }
+  
+  #main {
+    margin: 5vw;
+  }
+  
+  #name {
+    padding-left: 0px;
+  }
+  
+  #home {
+    padding-left: 4px;
+    width: 17vw;
+  }
+  
+  #user2 {
+    height: 75%;
+    width: 17vw;
+    text-align: center;
+    font-size: 3vw;
+    border-radius: 5px;
+    margin: 2px;
+  }
+  
+  #user3 {
+    height: 75%;
+    width: 17vw;
+    text-align: center;
+    font-size: 3vw;
+    border-radius: 5px;
+    margin: 2px;
+  }
+  
+  #delete {
+    padding: 1.5vw;
+    font-size: 3vw;
+    border-radius: 1.5vw;
+  }
+}
