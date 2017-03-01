@@ -53,6 +53,19 @@ app.use(express.bodyParser());
 //Cookie parsing
 app.use(express.cookieParser());
 
+//Trust "X-Forwarded-Proto" header
+app.enable('trust proxy');
+
+//Force HTTPS
+app.use (function (req, res, next) {
+	res.header("Strict-Transport-Security", "max-age=31536000; includeSubDomains");
+	if (req.secure) {
+		next();
+	} else {
+		res.redirect('https://' + req.headers.host + req.url);
+	}
+});
+
 //Homepage
 app.get("/", function (req, res) {
 	mongo.connect(url, function (err, db) {
